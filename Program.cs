@@ -56,26 +56,44 @@
 //      Console.WriteLine($"{num}");
 //  }
 
-Console.Write("Введите свою фамилию");
-string surname = Console.ReadLine()!.Trim();
+// Console.Write("Введите свою фамилию");
+// string surname = Console.ReadLine()!.Trim();
 
-if (string.IsNullOrEmpty(surname))
-{
-    Console.WriteLine("Фамилия не введена. Завершение работы.");
-    return;
-}
+// if (string.IsNullOrEmpty(surname))
+// {
+//     Console.WriteLine("Фамилия не введена. Завершение работы.");
+//     return;
+// }
 
-Random rnd = new(surname.GetHashCode() + DateTime.Now.DayOfYear);
+// Random rnd = new(surname.GetHashCode() + DateTime.Now.DayOfYear);
 
-var assigned = Enumerable.Range(1, 10)
-    .OrderBy(_ => rnd.Next())
-    .Take(2)
-    .OrderBy(x => x)
-    .ToList();
+// var assigned = Enumerable.Range(1, 10)
+//     .OrderBy(_ => rnd.Next())
+//     .Take(2)
+//     .OrderBy(x => x)
+//     .ToList();
 
-Console.WriteLine($"Задачи: №{assigned[0]} и №{assigned[1]}");
+// Console.WriteLine($"Задачи: №{assigned[0]} и №{assigned[1]}");
 
  
+for (int i = 1; i <= 100; i++)
+        {
+            if (i % 3 == 0 && i % 5 == 0)
+            {
+                Console.WriteLine($"Первое число от 1 до 100, кратное 3 и 5: {i}");
+                break; 
+            }
+        }
 
-
-
+for (int i = 1; i <= 5; i++)
+        {
+            
+            for (int j = 1; j <= 5; j++)
+            {
+                if (i + j == 6)
+                {
+                    Console.WriteLine($"Найдена пара: (i = {i}, j = {j})");
+                    break; 
+                }
+            }
+        }
